@@ -1,7 +1,7 @@
-package MateriUas;
-import java.util.Scanner;
+package MateriUas; // Package MateriUas
+import java.util.Scanner; // Import Scanner dari java.util
 
-public class KafeOrderSoal2 {
+public class KafeOrderSoal2 { // Class KafeOrderSoal2
     public static void main(String[] args) { // Method main 
         Scanner input = new Scanner(System.in); // Membuat objek input dari class Scanner
 
@@ -13,13 +13,13 @@ public class KafeOrderSoal2 {
                          "Teh Tarik", 
                          "Cappucino", 
                          "Chocolate Ice"}; // Array untuk menyimpan nama menu
-        int[] harga = {20000, 15000, 12000, 10000, 8000, 20000, 25000}; 
+        int[] harga = {20000, 15000, 12000, 10000, 8000, 20000, 25000}; // Array untuk menyimpan harga menu 
 
         
         int[] jumlahPesanan = new int[menu.length];  // Array untuk menyimpan jumlah pesanan setiap menu
-        int pilihan;
+        int pilihan; // Variabel untuk menyimpan pilihan menu
 
-        System.out.println("=== Selamat Datang di Kafe ===");   
+        System.out.println("=== Selamat Datang di Kafe ==="); // Output Selamat Datang di Kafe   
         
 
         do { // bisa menjalankan perulangan berulangkali - kali sampai kita memilih untuk berhenti
@@ -36,9 +36,9 @@ public class KafeOrderSoal2 {
             switch (pilihan) {  // Switch case untuk memilih menu
                 case 1: // Case 1 untuk menambah pesanan
                 // Lihat Daftar Menu
-                System.out.println("\n=== DAFTAR MENU ===");
-                    for (int i = 0; i < menu.length; i++) { 
-                        System.out.println((i + 1) + ". " + menu[i] + " - Rp" + harga[i]);
+                System.out.println("\n=== DAFTAR MENU ==="); 
+                    for (int i = 0; i < menu.length; i++) {  // Looping untuk menampilkan menu
+                        System.out.println((i + 1) + ". " + menu[i] + " - Rp" + harga[i]); // Menampilkan menu dan harga
                     }
                     System.out.print("Masukkan nomor menu yang ingin dipesan: ");
                     int nomorMenu = input.nextInt();
@@ -51,8 +51,8 @@ public class KafeOrderSoal2 {
                         jumlahPesanan[nomorMenu - 1] += jumlah; // Menambahkan jumlah pesanan
                         System.out.println(jumlah + " " + menu[nomorMenu - 1] + " berhasil ditambahkan ke pesanan.");
                     }
-                    break;
-                case 2:
+                    break; // Break untuk menghentikan case 1
+                case 2: //
                     // Lihat Daftar Pesanan
                     System.out.println("\n=== Daftar Pesanan ===");
                     boolean Pesanan = false; // Boolean untuk mengecek apakah ada pesanan atau tidak
@@ -67,7 +67,7 @@ public class KafeOrderSoal2 {
                     }
                     break;
 
-                case 3:
+                case 3: // Case 3 untuk menghitung total biaya
                     // Hitung Total Biaya
                     int totalBiaya = 0;
                     System.out.println("\n=== Total Biaya ===");
@@ -88,7 +88,7 @@ public class KafeOrderSoal2 {
                     System.out.println(" ");
                     break;
 
-                default:
+                default: // Default jika pilihan tidak valid
                     System.out.println("Pilihan tidak valid. Silakan coba lagi.");
             }
         } while(pilihan != 4); // Perulangan akan berhenti jika pilih = 4
