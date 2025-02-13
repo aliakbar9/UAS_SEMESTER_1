@@ -1,4 +1,3 @@
-package MateriUas; // Package MateriUas
 import java.util.Scanner; // Import Scanner dari java.util
 
 public class KafeOrderSoal2 { // Class KafeOrderSoal2
