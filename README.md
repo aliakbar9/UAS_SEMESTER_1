@@ -5,4 +5,5 @@ public class NamaClasskamu {
 }
 
 untuk membuat objek input dari class Scanner kita bisa menambahkan Scanner seperti di bawah ini
+
 Scanner input = new Scanner(System.in);
